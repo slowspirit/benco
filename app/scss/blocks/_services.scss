@@ -1,0 +1,59 @@
+.services{
+    padding: rem(80px) 0;
+    text-align: center;
+    position: relative;
+    
+    &::before{
+        position: absolute;
+        content: "";
+        top: rem(60px);
+        left: 0;
+        width: rem(85px);
+        height: rem(170px);
+        background-image: url(../../images/services-bg.png);
+        background-repeat: no-repeat;
+    }
+
+    &__list{
+        margin: 0;
+        margin-top: rem(-40px);
+        list-style: none;
+        width: 100%;
+        background-color: $bgSecondary;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(121px) 0;
+    }
+
+    &__list-item{
+        display: flex;
+        align-items: center;
+        & + .services__list-item{
+            margin-left: rem(189px);
+        }
+    }
+
+    &__item-info{
+        margin-left: rem(20px);
+        text-align: left;
+    }
+
+    &__item-title{
+        margin: 0;
+        margin-bottom: rem(8px);
+        @extend %roboto-500;
+        color: $black;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    &__item-text{
+        margin: 0;
+        @extend %roboto-500;
+        color: $black;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

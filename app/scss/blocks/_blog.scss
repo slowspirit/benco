@@ -1,0 +1,139 @@
+.blog{
+    padding: rem(80px) 0 rem(147px);
+    text-align: center;
+    position: relative;
+    
+    &::before{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        top: 46%;
+        left: 0;
+        width: rem(320px);
+        height: rem(168px);
+        background-image: url(../../images/blog-bg-1.png);
+        background-repeat: no-repeat;
+    }
+
+    &::after{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        top: rem(92px);
+        right: rem(140px);
+        width: rem(313px);
+        height: rem(215px);
+        background-image: url(../../images/blog-bg-2.png);
+        background-repeat: no-repeat;
+    }
+
+    &__text{
+        margin-bottom: rem(30px);
+    }
+
+    &__card-list{
+        margin: rem(-57px);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+
+        &::before{
+            z-index: -1;
+            position: absolute;
+            content: "";
+            width: rem(1036px);
+            height: rem(604px);
+            bottom: 0;
+            left: rem(57px);
+            background-color: $bgSecondary;
+            border-radius: 0px 100px 100px 0px;
+        }
+
+    }
+
+    &__card{
+        margin: rem(57px);
+        width: rem(585px);
+        height: rem(388px);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 2px solid rgba(86, 86, 85, 0.5);
+        border-radius: rem(50px);
+        @extend %roboto-500;
+        color: $white;
+        display: flex;
+        padding: rem(20px) rem(50px);
+        &:nth-child(1){
+            background-image: url(../../images/blog-1.jpg);
+        }
+        &:nth-child(2){
+            background-image: url(../../images/blog-2.jpg);
+        }
+        &:nth-child(3){
+            background-image: url(../../images/blog-3.jpg);
+        }
+        &:nth-child(4){
+            background-image: url(../../images/blog-4.jpg);
+        }
+    }
+
+    &__card-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        align-items: start;
+    }
+
+    &__card-info{
+        font-size: rem(14px);
+        line-height: rem(16px);
+        margin-bottom: rem(10px);
+
+        span + span{
+            margin-left: rem(15px);
+        }
+
+        span{
+            padding: 0;
+            padding-left: rem(23px);
+            position: relative;
+        }
+        
+        
+    }
+
+    &__card-date::before,
+    &__card-comments::before{
+        position: absolute;
+        content: "";
+        top: rem(-2px);
+        left: 0;
+        width: rem(18px);
+        height: rem(18px);
+        background-image: url(../../images/icons/calendar.svg);
+        background-repeat: no-repeat;
+    }
+
+    &__card-date::before{
+        background-image: url(../../images/icons/calendar.svg);
+    }
+
+    &__card-comments::before{
+        background-image: url(../../images/icons/bubble.svg);
+    }
+
+    &__card-title{
+        margin: 0;
+        margin-bottom: rem(5px);
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    &__card-link{
+        font-size: 20px;
+        line-height: 23px;
+        color: rgba($white, .8); 
+    }
+}

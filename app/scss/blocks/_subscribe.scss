@@ -1,0 +1,79 @@
+.subscribe{
+    padding: rem(80px) 0;
+    background-color: $bgSecondary;
+    position: relative;
+
+    &::before{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        width: rem(86px);
+        height: rem(118px);
+        top: rem(7px);
+        left: rem(105px);
+        background-image: url(../../images/subscribe-bg-1.png);
+        background-repeat: no-repeat;
+    }
+
+    &::after{
+        z-index: -1;
+        position: absolute;
+        content: "";
+        width: rem(147px);
+        height: rem(343px);
+        bottom: rem(85px);
+        right: 0;
+        background-image: url(../../images/subscribe-bg-2.png);
+        background-repeat: no-repeat;
+    }
+    
+    &__inner{
+        height: rem(697px);
+        background-image: url(../../images/subscribe-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: drop-shadow(0px 34px 62px rgba(0, 0, 0, .2));
+        border-radius: 20px;
+        padding: rem(100px) 0 0 rem(110px);
+    }
+
+    &__content{
+        max-width: rem(610px);
+        text-align: center;
+    }
+    
+    &__text{
+        color: $black;
+        margin-bottom: rem(80px);
+    }
+    &__form{
+        position: relative;
+    }
+
+    &__input{
+        width: 100%;
+        @extend %montserrat-400;
+        font-size: rem(22px);
+        line-height: rem(27px);
+        color: $black;
+        padding: rem(26px) rem(230px) rem(26px) rem(40px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: rem(150px);
+        border: none;
+        &::placeholder{
+            color: $black;
+        }
+    }
+    &__btn{
+        @extend %montserrat-700;
+        font-size: rem(22px);
+        line-height: rem(27px);
+        text-transform: uppercase;
+        padding: rem(16px) rem(38px);
+        position: absolute;
+        top: rem(8px);
+        right: rem(10px);
+        z-index: 1;
+    }
+}

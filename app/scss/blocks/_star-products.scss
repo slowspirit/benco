@@ -1,0 +1,189 @@
+.star-products{
+    text-align: center;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: rem(107px);
+        height: rem(123px);
+        top: rem(100px);
+        right: 0;
+        background-image: url(../../images/star-product-bg.png);
+        background-repeat: no-repeat;
+    }
+
+
+    &__text{
+        margin-bottom: rem(30px);
+    }
+
+    &__nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__nav-item{
+        padding: rem(15px);
+        border: rem(1px) solid $mainColor;
+        border-radius: 50%;
+
+        & + .star-products__nav-item{
+            margin-left: rem(133px);
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content:"";
+                width: rem(113px);
+                height: rem(1px);
+                top: 50%;
+                left: rem(-123px);
+                background-color: $mainColor;
+            }
+        }
+
+    }
+    &__nav-btn{
+        width: rem(100px);
+        height: rem(100px);
+        padding-top: rem(38px);
+        border: none;
+        border-radius: 50%;
+        background-color: $greyBg;
+        cursor: pointer;
+        @extend %roboto-500;
+        color: $mainColor;
+        font-size: 18px;
+        line-height: 21px;
+        transition: all .3s;
+
+        &--active{
+            background-color: $accent;
+            transition: all .3s;
+        }
+    }
+
+    &__slider{
+        margin: rem(50px) rem(-11px) rem(80px);
+    }
+    
+    &__tab{
+        display: none;
+        &.star-products__tab--active{
+            display: block;
+        }
+    }
+
+    &__tab-content{
+        display: flex;
+        justify-content: center;
+        padding-top: rem(10px);
+        height: rem(505px);
+
+        .slider-item{
+            width: rem(360px);
+            margin: rem(11px);
+        }
+    }
+
+    &__slider-items{
+        height: rem(506px);
+        // padding-bottom: 40px;
+    }
+
+    & .slider-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: rem(360px);
+        height: rem(476px);
+        padding: rem(36px);
+        background-color: #FFFFFF;
+        border: 2px dashed rgba(52, 56, 61, 0.5);
+        border-radius: 200px 200px 20px 20px;
+        margin: 0 rem(11px);
+
+        &:hover{
+            cursor: pointer;
+            border-color: $accent;
+            box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.1);
+        }
+
+        &__image-box{
+            position: relative;
+            height: rem(270px);
+        }
+
+        &__image{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__title{
+            width: rem(170px);
+            margin: 0;
+            margin-bottom: rem(10px);
+            @extend %roboto-500;
+            font-size: 22px;
+            line-height: 26px;
+            color: $mainColor;
+        }
+
+        &__rating{
+            display: inline-block;
+            @extend %roboto-500;
+            font-size: 20px;
+            line-height: 23px;
+            color: $mainColor;
+            padding-left: rem(33px);
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: rem(23px);
+                height: rem(23px);
+                top: 0;
+                left: 0;
+                background-image: url(../../images/icons/star_border.svg);
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__buy-btn{
+            width: rem(47px);
+            height: rem(47px);
+            background-color: $accent;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            img{
+                margin: auto;
+            }
+        }
+
+        &__price{
+            margin-top: rem(32px);
+            @extend %roboto-500;
+            font-size: 30px;
+            line-height: 35px;
+            color: $black;
+        }
+    }
+}
+.slick-list{
+    padding-top: rem(10px);
+    height: rem(530px);
+}

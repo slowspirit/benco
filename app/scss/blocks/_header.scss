@@ -1,0 +1,261 @@
+.header{
+    height: 100vh;
+    background-image: url(../../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: content;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content:"";
+        top: 25%;
+        left: 0;
+        width: rem(139px);
+        height: rem(261px);
+        background-image: url(../../images/decor/hero-2.png);
+        background-repeat: no-repeat;
+    }
+
+    &::after{
+        position: absolute;
+        content:"";
+        top: 0;
+        right: 0;
+        width: 1244px;
+        height: 100vh;
+        background-image: url(../../images/hero.png);
+        background-repeat: no-repeat;
+    }
+
+    &__top{
+        padding-top: rem(50px);
+        height: rem(40px);
+        display: flex;
+        align-items: center;
+        margin-bottom: rem(30px);
+    }
+
+    &__phone{
+        padding-left: rem(40px);
+        margin-right: rem(60px);
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: "";
+            top: rem(-5px);
+            left: 0;
+            width: rem(30px);
+            height: rem(30px);
+            background-image: url(../../images/icons/headphone.svg);
+            background-repeat: no-repeat;
+        }
+    }
+    &__welcome{
+        @extend %roboto-500-italic;
+        margin-right: auto;
+    }
+
+    &__currency{
+        width: 220px;
+        height: 60px;
+        padding: 16px 24px;
+    }
+    &__account{
+        margin-left: rem(20px);
+        box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2);
+    }
+
+    &__bottom{
+        display: flex;
+        margin-bottom: rem(30px);
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: rem(45px);
+        margin-right: auto;
+
+    }
+    &__menu-item + .header__menu-item{
+        margin-left: rem(50px);
+    }
+    &__menu-link{
+        color: $linkColor;
+        @extend %roboto-500;
+        font-size: 22px;
+        line-height: 26px;
+        transition: all .3s;
+        position: relative;
+        &:hover{
+            color: $mainColor;
+            transition: all .3s;  
+
+            &::before{
+                background-color: $accent;
+            }
+        }
+
+        &::before{
+            position: absolute;
+            content: "";
+            height: rem(3px);
+            width: 70%;
+            bottom: rem(-10px);
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: rem(5px);
+            background-color: transparent;
+            transition: all .3s;
+        }
+    }
+    &__link{
+        display: block;
+        margin: rem(15px) rem(20px) 0;
+        &:first-child{
+            margin-left: auto;
+        }
+        &:last-child{
+            margin-right: rem(10px);
+        }
+    }
+}
+
+.logo{
+
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: transparent;
+    border: 2px solid $accent;
+    border-radius: 50px;
+    height: 60px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding: 16px 24px;
+    text-align: center;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    @extend %montserrat-700;
+    color: #fff;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single{
+    border-radius: 30px 30px 0 0;
+}
+
+.select2-container .select2-container--default .select2-container--open{
+    top: 68px;
+}
+
+.select2-results__option {
+    text-align: center;
+    @extend %montserrat-700;
+    padding: 16px 0;
+    background-color: transparent;
+}
+.select2-dropdown.select2-dropdown--below{
+    background: $dropdownColor;
+    border: 2px solid $accent;
+    border-radius: 0 0 30px 30px;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable[aria-selected="true"] {
+    background-color: $accent;
+    color: white;
+}
+
+
+.select2-results__options{
+    & li:last-child{
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+.select2-selection__arrow{
+    display: none;
+}
+
+
+.hero{
+    display: flex;
+    height: calc(100vh - rem(196px));
+
+    &__content{
+        z-index: 5;
+        max-width: rem(660px);
+        position: relative; 
+    }
+
+    &__title{
+        @extend %title;
+        text-transform: none;
+        margin: rem(160px) 0 rem(30px);
+        position: relative;
+        @media #{$screen-768}{
+            margin: rem(120px) 0 rem(30px);
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: rem(135px);
+            height: rem(130px);
+            top: rem(-70px);
+            right: rem(-80px);
+            background-image: url(../../images/decor/hero-1.png);
+            background-repeat: no-repeat;
+        }
+
+        & span{
+            color: $accent;
+            position: relative;
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 4px;
+                bottom: 8px;
+                left: 0;
+                background-color: $accent;
+            }
+        }
+    }
+    &__text{
+        width: rem(489px);
+        margin-bottom: rem(60px);
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: "";
+            width: rem(135px);
+            height: rem(130px);
+            top: rem(70px);
+            right: rem(-30px);
+            background-image: url(../../images/decor/hero-1.png);
+            background-repeat: no-repeat;
+        }
+    }
+    &__image{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        // width: 100%;
+    }
+}
