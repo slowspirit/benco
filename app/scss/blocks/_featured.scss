@@ -3,6 +3,17 @@
     text-align: center;
     position: relative;
 
+    @media(max-width: 1279px){
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+
+    @media(max-width: 767px){
+        padding: rem(40px) 0;
+    }
+
     &::before{
         position: absolute;
         content: "";
@@ -10,9 +21,10 @@
         height: rem(118px);
         top: rem(360px);
         left: rem(60px);
-        background-image: url(../../images/featured-bg1.png);
+        background-image: url(../../images/decor/featured-bg1.png);
         background-repeat: no-repeat;
     }
+    
     &::after{
         position: absolute;
         content: "";
@@ -20,7 +32,7 @@
         height: rem(118px);
         top: 0;
         right: 0;
-        background-image: url(../../images/featured-bg2.png);
+        background-image: url(../../images/decor/featured-bg2.png);
         background-repeat: no-repeat;
     }
 
@@ -29,7 +41,7 @@
     }
 
     &__list{
-        margin: rem(-80px);
+        margin: rem(-80px) 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -42,10 +54,20 @@
         text-align: left;
         margin: rem(40px);
 
+        @media(max-width: 767px){
+            margin: rem(40px) 0;
+        }
+
+        @media(max-width: 450px){
+            margin: rem(40px) 0;
+            width: 100%;
+            height: auto;
+        }
+
         &:hover{
             cursor: pointer;
             & .featured__card-image{
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 rem(4px) rem(4px) rgba(0, 0, 0, 0.25);
                 transition: all .2s;
             }
         }
@@ -58,12 +80,16 @@
         border: 2px solid $manatee;
         object-fit: cover;
         transition: all .2s;
+
+        @media(max-width: 450px){
+            width: 100%;
+        }
     }
 
     &__card-title{
         @extend %roboto-700;
-        font-size: 20px;
-        line-height: 23px;
+        font-size: rem(20px);
+        line-height: rem(23px);
         color: $mainColor;
         margin: 0;
         margin-bottom: rem(15px);
@@ -71,11 +97,16 @@
 
     &__card-text{
         @extend %roboto-400;
-        font-size: 24px;
-        line-height: 28px;
+        font-size: rem(24px);
+        line-height: rem(28px);
         color: $mainColor;
         margin: 0;
         margin-bottom: rem(15px);
+
+        @media(max-width: 450px){
+            font-size: rem(18px);
+            line-height: rem(22px);
+        }
     }
 
     &__card-bottom{
@@ -85,26 +116,43 @@
     }
     &__price-old{
         @extend %roboto-400;
-        font-size: 32px;
-        line-height: 37px;
+        font-size: rem(32px);
+        line-height: rem(37px);
         color: $accent;
         text-decoration: line-through;
         margin-right: rem(10px);
+
+        @media(max-width: 450px){
+            font-size: rem(22px);
+            line-height: rem(26px);
+        }
     }
     &__price-new{
         @extend %roboto-700;
-        font-size: 32px;
-        line-height: 37px;
+        font-size: rem(32px);
+        line-height: rem(37px);
         color: $black;
+
+        @media(max-width: 450px){
+            font-size: rem(22px);
+            line-height: rem(26px);
+        }
+
     }
     &__card-star{
         margin-top: rem(10px);
     }
     &__btn{
         @extend %btn;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: rem(18px);
+        line-height: rem(22px);
         color: $mainColor;
         padding: rem(9px) rem(32px);
+
+        @media(max-width: 450px){
+            padding: rem(7px) rem(20px);
+            font-size: rem(16px);
+            line-height: rem(20px);
+        }
     }
 }

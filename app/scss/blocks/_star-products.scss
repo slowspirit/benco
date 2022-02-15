@@ -2,6 +2,12 @@
     text-align: center;
     position: relative;
 
+    @media(max-width: 1279px){
+        &::before{
+            display: none;
+        }
+    }
+
     &::before{
         position: absolute;
         content: "";
@@ -9,10 +15,9 @@
         height: rem(123px);
         top: rem(100px);
         right: 0;
-        background-image: url(../../images/star-product-bg.png);
+        background-image: url(../../images/decor/star-product-bg.png);
         background-repeat: no-repeat;
     }
-
 
     &__text{
         margin-bottom: rem(30px);
@@ -23,14 +28,23 @@
         justify-content: center;
         align-items: center;
     }
+
     &__nav-item{
         padding: rem(15px);
         border: rem(1px) solid $mainColor;
         border-radius: 50%;
 
+        @media(max-width: 767px){
+            padding: rem(10px);
+        }
+
         & + .star-products__nav-item{
             margin-left: rem(133px);
             position: relative;
+
+            @media(max-width: 767px){
+                margin-left: rem(40px);
+            }
 
             &::before{
                 position: absolute;
@@ -40,10 +54,15 @@
                 top: 50%;
                 left: rem(-123px);
                 background-color: $mainColor;
+
+                @media(max-width: 767px){
+                    width: rem(20px);
+                    left: rem(-30px);
+                }
             }
         }
-
     }
+
     &__nav-btn{
         width: rem(100px);
         height: rem(100px);
@@ -54,9 +73,17 @@
         cursor: pointer;
         @extend %roboto-500;
         color: $mainColor;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: rem(18px);
+        line-height: rem(21px);
         transition: all .3s;
+
+        @media(max-width: 767px){
+            width: rem(55px);
+            height: rem(55px);
+            padding-top: rem(20px);
+            font-size: rem(12px);
+            line-height: rem(14px);
+        }
 
         &--active{
             background-color: $accent;
@@ -65,11 +92,12 @@
     }
 
     &__slider{
-        margin: rem(50px) rem(-11px) rem(80px);
+        margin: rem(50px) 0 rem(80px);
     }
     
     &__tab{
         display: none;
+
         &.star-products__tab--active{
             display: block;
         }
@@ -81,15 +109,15 @@
         padding-top: rem(10px);
         height: rem(505px);
 
-        .slider-item{
+        & .slider-item__tab{
             width: rem(360px);
             margin: rem(11px);
         }
     }
 
     &__slider-items{
+        width: 100%;
         height: rem(506px);
-        // padding-bottom: 40px;
     }
 
     & .slider-item{
@@ -102,13 +130,12 @@
         padding: rem(36px);
         background-color: #FFFFFF;
         border: 2px dashed rgba(52, 56, 61, 0.5);
-        border-radius: 200px 200px 20px 20px;
-        margin: 0 rem(11px);
+        border-radius: rem(200px) rem(200px) rem(20px) rem(20px);
 
         &:hover{
             cursor: pointer;
             border-color: $accent;
-            box-shadow: 0px 15px 39px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 rem(15px) rem(39px) rgba(0, 0, 0, 0.1);
         }
 
         &__image-box{
@@ -135,16 +162,16 @@
             margin: 0;
             margin-bottom: rem(10px);
             @extend %roboto-500;
-            font-size: 22px;
-            line-height: 26px;
+            font-size: rem(22px);
+            line-height: rem(26px);
             color: $mainColor;
         }
 
         &__rating{
             display: inline-block;
             @extend %roboto-500;
-            font-size: 20px;
-            line-height: 23px;
+            font-size: rem(20px);
+            line-height: rem(23px);
             color: $mainColor;
             padding-left: rem(33px);
             position: relative;
@@ -167,8 +194,9 @@
             background-color: $accent;
             border: none;
             border-radius: 50%;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 rem(4px) rem(4px) rgba(0, 0, 0, 0.25);
             cursor: pointer;
+
             img{
                 margin: auto;
             }
@@ -177,13 +205,35 @@
         &__price{
             margin-top: rem(32px);
             @extend %roboto-500;
-            font-size: 30px;
-            line-height: 35px;
+            font-size: rem(30px);
+            line-height: rem(35px);
             color: $black;
         }
     }
-}
-.slick-list{
-    padding-top: rem(10px);
-    height: rem(530px);
+
+    .slick-slide{
+        width: rem(360px);
+        margin: 0 rem(11px);
+
+        @media(max-width: 400px){
+            width: auto;
+        }
+    }
+
+    .slick-list{
+        padding-top: rem(10px);
+        height: rem(530px);
+    }
+
+    &__arrow-prev{
+        @media(max-width: 1600px){
+            left: rem(20px);
+        }
+    }
+
+    &__arrow-next{
+        @media(max-width: 1600px){
+            right: rem(20px);
+        }
+    }
 }

@@ -6,9 +6,13 @@
     background-repeat: no-repeat;
     background-position: right rem(80px);
 
+    @media(max-width: 767px){
+        background-image: none;
+        padding: rem(20px) rem(5px);
+    }
+
     &__title{
         @extend %subtitle;
-        padding: 0;
     }
 
     &__text{
@@ -17,18 +21,19 @@
     }
 
     &__slider{
-        margin: 0 -25px;
+        margin: 0 rem(-25px);
         height: rem(410px);
-        
-        // margin: 0 -10px;
-    }
 
+        @media(max-width: 767px){
+            margin: 0 rem(-15px) 0 rem(-25px);
+        }
+    }
 }
 
 .slider__card{
     width: 100%;
     display: inline-block;
-    margin: 0 25px;
+    margin: 0 rem(25px);
 }
 
 .slick-arrow{
@@ -41,22 +46,31 @@
     border: none;
     background-color: $accent;
     color: $mainColor;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 rem(2px) rem(4px) rgba(0, 0, 0, 0.25);
     z-index: 5;
     cursor: pointer;
     
 }
+
 .slick-prev{
     left: rem(-80px);
     img{
-        margin-top: 3px;
-        margin-left: -3px;
+        margin-top: rem(3px);
+        margin-left: rem(-3px);
+    }
+    @media(max-width:1730px){
+        left: rem(-20px);
     }
 }
+
 .slick-next{
     right: rem(-80px);
     img{
-        margin-top: 3px;
-        margin-left: 3px;
+        margin-top: rem(3px);
+        margin-left: rem(3px);
+    }
+
+    @media(max-width:1730px){
+        right: rem(-20px);
     }
 }

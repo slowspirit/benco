@@ -11,11 +11,11 @@
     }
 
     &__image-box{
-        margin-top: 40px;
+        margin-top: rem(40px);
         width: 100%;
         height: rem(149px);
         background-color: $image-box;
-        border-radius: 30px;
+        border-radius: rem(30px);
         margin-bottom: rem(20px);
         text-align: center;
         transition: all .3s;
@@ -27,32 +27,32 @@
         display: block;
         left: 50%;
         transform: translateX(-50%);
-        top: -40px;
+        top: rem(-40px);
     }
 
     &__title{
-        padding-top: 106px;
+        padding-top: rem(106px);
     }
 
     &__price{
         @extend %montserrat-700;
         color: $titleMain;
-        font-size: 26px;
-        line-height: 32px;
+        font-size: rem(26px);
+        line-height: rem(32px);
         margin: rem(17px) 0;
     }
 
     &__text{
-        font-size: 18px;
-        line-height: 21px;
+        font-size: rem(18px);
+        line-height: rem(21px);
         padding: 0 rem(18px);
         margin-bottom: rem(20px);
     }
 
     &__btn{
         @extend %btn;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: rem(18px);
+        line-height: rem(22px);
         padding-top: rem(14px);
         width: rem(199px);
         height: rem(50px);
@@ -62,7 +62,7 @@
         &:hover{
             transition: all .3s;
             background-color: $accent;
-            box-shadow: 0px 5px 10px rgba(205, 168, 97, 0.29);
+            box-shadow: 0px rem(5px) rem(10px) rgba(205, 168, 97, 0.29);
         }
     }
 

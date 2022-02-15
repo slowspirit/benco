@@ -2,6 +2,16 @@
     padding: rem(80px) 0;
     text-align: center;
     position: relative;
+
+    @media(max-width: 1279px){
+        &::before{
+            display: none;
+        }
+    }
+
+    @media(max-width: 767px){
+        padding: rem(40px) 0 0;
+    }
     
     &::before{
         position: absolute;
@@ -10,8 +20,15 @@
         left: 0;
         width: rem(85px);
         height: rem(170px);
-        background-image: url(../../images/services-bg.png);
+        background-image: url(../../images/decor/services-bg.png);
         background-repeat: no-repeat;
+    }
+
+    &__image{
+        max-width: 100%;
+        @media(max-width: 767px){
+            max-width: 70%;
+        }
     }
 
     &__list{
@@ -20,11 +37,23 @@
         list-style: none;
         width: 100%;
         background-color: $bgSecondary;
-        border-radius: 30px;
+        border-radius: rem(30px);
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: rem(121px) 0;
+        padding: rem(121px) rem(20px);
+        
+        @media(max-width: 1279px){
+            justify-content: space-between;
+        }
+
+        @media(max-width: 767px){
+            width: auto;
+            flex-direction: column;
+            border-radius: 0;
+            padding: rem(100px) rem(20px);
+            margin: rem(-40px) rem(-10px) 0; 
+        }
     }
 
     &__list-item{
@@ -32,6 +61,14 @@
         align-items: center;
         & + .services__list-item{
             margin-left: rem(189px);
+
+            @media(max-width: 1279px){
+                margin-left: 0;
+            }
+
+            @media(max-width: 767px){
+                margin-top: rem(60px);
+            }
         }
     }
 
@@ -45,15 +82,15 @@
         margin-bottom: rem(8px);
         @extend %roboto-500;
         color: $black;
-        font-size: 20px;
-        line-height: 23px;
+        font-size: rem(20px);
+        line-height: rem(23px);
     }
 
     &__item-text{
         margin: 0;
         @extend %roboto-500;
         color: $black;
-        font-size: 14px;
-        line-height: 16px;
+        font-size: rem(14px);
+        line-height: rem(16px);
     }
 }

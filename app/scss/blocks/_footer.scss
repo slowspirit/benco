@@ -2,8 +2,13 @@
     background-color: $accent;
     padding: rem(80px) 0;
 
+    @media(max-width: 767px){
+        padding: rem(40px) 0;
+    }
+
     &__inner{
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__info{
@@ -27,10 +32,20 @@
         margin: rem(5px);
     }
 
+    &__lists{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: rem(20px);
+    }
+
     &__list{
         padding: 0;
-        & + .footer__list{
-            margin-left: rem(150px);
+        margin-left: rem(30px);
+        margin-right: rem(150px);
+
+        &:last-child{
+            margin-right: 0;
         }
 
     }
@@ -44,6 +59,11 @@
         border-bottom: 2px solid $white;
         margin-left: rem(-30px);
         margin-bottom: rem(25px);
+
+        @media(max-width: 767px){
+            font-size: rem(22px);
+            line-height: rem(26px);
+        }
     }
     &__list-item{
         @extend %montserrat-500;
@@ -52,6 +72,10 @@
         line-height: rem(27px);
         list-style: none;
         position: relative;
+        @media(max-width: 767px){
+            font-size: rem(18px);
+            line-height: rem(22px);
+        }
         &::before{
             position: absolute;
             content: "\2022";

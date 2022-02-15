@@ -3,36 +3,63 @@
     text-align: center;
     position: relative;
 
+    @media(max-width:1650px){
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+
+    @media(max-width:767px){
+        padding: rem(40px) 0;
+    }
+
     &::before{
+        z-index: -1;
         position: absolute;
         content: "";
-        bottom: 10px;
+        bottom: rem(10px);
         left: 0;
-        height: 109px;
-        width: 109px;
-        background-image: url(../../images/specials-bg-1.jpg);
+        height: rem(109px);
+        width: rem(109px);
+        background-image: url(../../images/decor/specials-bg-1.png);
         background-repeat: no-repeat;
     }
+    
     &::after{
+        z-index: -1;
         position: absolute;
         content: "";
-        top: 32px;
-        right: 44px;
-        height: 295px;
-        width: 10px;
-        background-image: url(../../images/specials-bg-2.jpg);
+        top: rem(32px);
+        right: rem(44px);
+        height: rem(295px);
+        width: rem(10px);
+        background-image: url(../../images/decor/specials-bg-2.png);
         background-repeat: no-repeat;
     }
 
     &__inner{
+        display: block;
         padding-top: rem(60px);
-        width: 100%;
         height: rem(767px);
         background-image: url(../../images/specials-bg.jpg);
         background-repeat: no-repeat;
         background-size: content;
         background-position: center;
-        border-radius: 50px;
+        border-radius: rem(50px);
+        border: 5px solid $jungle-mist;
+        
+        @media(max-width:767px){
+            margin: 0 rem(-10px);
+            height: auto;
+            border-radius: 0;
+            border: none;
+            padding: rem(60px) rem(10px);
+            background: linear-gradient(198.73deg, rgba(0, 0, 0, 0.0001) 15.31%, rgba(0, 0, 0, 0.837986) 67.37%), url(../../images/specials-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     &__title{
@@ -40,27 +67,38 @@
         @extend %subtitle;
         color: $black;
         border-bottom: none;
+
+        @media(max-width:767px){
+            color: $alabaster;
+        }
     }
 
     &__btn{
         @extend %btn;
         color: $mainColor;
-        padding: 11px 41px;
+        padding: rem(11px) rem(41px);
         width: rem(210px);
-        font-size: 22px;
-        line-height: 27px;
+        font-size: rem(22px);
+        line-height: rem(27px);
         display: block;
         margin: 0 auto;
+
+        @media(max-width:767px){
+            &:hover{
+                color: $white;
+            }
+        }
     }
 
     &__counter{
         display: flex;
         margin: 0 auto;
-        max-width: 504px ;
+        max-width: rem(504px);
         justify-content: space-between;
         align-items: center;
         margin-bottom: rem(34px);
     }
+
     &__counter-item{
         span{
             display: flex;
@@ -71,18 +109,23 @@
             border: 1px solid #F3E9E9;
             border-radius: 50%;
             @extend %montserrat-600;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: rem(24px);
+            line-height: rem(29px);
             color: $black;
             position: relative;
+
+            @media(max-width:767px){
+                color: $white;
+            }
+
             &.specials__counter-days::before,
             &.specials__counter-minutes::before{
                 position: absolute;
                 content: "";
-                top: -2px;
+                top: rem(-2px);
                 left: 53%;
-                width: 32px;
-                height: 33px;
+                width: rem(32px);
+                height: rem(33px);
                 border-radius: 0px 100% 0 0;
                 border-top: 3px solid #fff;
                 border-right: 3px solid #fff;
@@ -91,23 +134,28 @@
             &.specials__counter-seconds::before{
                 position: absolute;
                 content: "";
-                top: -2px;
-                left: 33px;
+                top: rem(-2px);
+                left: rem(33px);
                 width: 50%;
-                height: 68px;
-                border-radius: 0px 100px 100px 0;
+                height: rem(68px);
+                border-radius: 0 rem(100px) rem(100px) 0;
                 border-top: 3px solid #fff;
                 border-right: 3px solid #fff;
                 border-bottom: 3px solid #fff;
             }
         }
     }
+
     &__counter-text{
         margin-top: rem(3px);
         @extend %montserrat-600-italic;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: rem(16px);
+        line-height: rem(20px);
         color: $black;
+
+        @media(max-width:767px){
+            color: $white;
+        }
     }
     
 }

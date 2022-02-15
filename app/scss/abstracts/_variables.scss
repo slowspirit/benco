@@ -1,11 +1,7 @@
 /**
 * Colors
-*
-* Название переменной конкретного цвета генерируется через сервис: http://chir.ag/projects/name-that-color/.
-* Значение цвета всегда указывается в HEX-формате в нижнем регистре (кроме исключительных случаев).
 */
-// Пример указания цветов
-//$slate-gray: #768298;
+
 $black: #000000;
 $white: #ffffff;
 $dropdownColor: #5F6670;
@@ -19,6 +15,8 @@ $bgSecondary: rgba(#cfaa60, .19);
 $alabaster: #F8F7F7;
 $manatee: #8C94A6;
 $image-box: #F2F1F1;
+$jungle-mist: #AACACD;
+
 /**
 * Fonts
 */
@@ -72,6 +70,10 @@ $font-size-base: 16px;
   font-weight: 700;
 }
 
+/**
+* Elements
+*/
+
 %btn{
     padding: rem(16px) rem(41px);
     @extend %montserrat-700;
@@ -79,8 +81,9 @@ $font-size-base: 16px;
     border: 2px solid $accent;
     border-radius: rem(50px);
     cursor: pointer;
-    box-shadow: 0px 5px 10px rgba(205, 168, 97, 0.29);
+    box-shadow: 0 rem(5px) rem(10px) rgba(205, 168, 97, 0.29);
     transition: all .3s;
+
     &:hover{
         background-color: transparent;
         transition: all .3s;
@@ -88,22 +91,34 @@ $font-size-base: 16px;
 }
 
 %title{
-    font-size: 76px;
-    line-height: 93px;
+    font-size: rem(76px);
+    line-height: rem(93px);
     color: $titleMain;
     text-transform: uppercase;
     @extend %montserrat-600;
+    
+    @media(max-width:767px){
+        font-size: rem(40px);
+        line-height: rem(50px);
+    }
 }
 
 %subtitle{
     display: inline-block;
-    font-size: 30px;
-    line-height: 37px;
+    font-size: rem(30px);
+    line-height: rem(37px);
     color: $titleMain;
     @extend %montserrat-600;
     padding-bottom: rem(10px);
     border-bottom: 2px solid $accent;
+
+    @media(max-width:767px){
+        font-size: rem(26px);
+        line-height: rem(30px);
+        padding-bottom: rem(10px);
+    }
 }
+
 
 
 

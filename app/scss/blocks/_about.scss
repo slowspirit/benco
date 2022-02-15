@@ -2,7 +2,17 @@
     z-index: 10;
     padding: rem(80px) rem(40px);
     position: relative;
+    
+    @media(max-width:1279px){
+        &::before{
+            display: none;
+        }
+    }
 
+    @media(max-width:767px){
+        padding: 0;
+    }
+    
     &::before{
         position: absolute;
         content:"";
@@ -12,19 +22,38 @@
         left: rem(20px);
         background-image: url(../../images/decor/about-before.png);
         background-repeat: no-repeat;
+        
+        
     }
     &__inner{
         display: flex;
+        flex-wrap: wrap;
         padding-left: rem(70px);
         background: rgba(205, 168, 97, 0.1);
-        box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px rem(14px) rem(44px )rgba(0, 0, 0, 0.03);
         border-radius: rem(50px);
         background-image: url(../../images/about-bg.png);
         background-repeat: no-repeat;
         background-position: 93% bottom;
+
+        @media(max-width:1730px){
+            background-image: none;
+            padding: rem(20px) rem(15px) rem(50px);
+        }
+
+        @media(max-width:767px){
+            margin: 0 rem(-10px);
+            border-radius: 0;
+            padding: rem(20px) rem(15px) rem(50px);
+        }   
     }
     &__image{
         margin-right: rem(80px);
+        max-width: 100%;
+        align-self: center;
+        @media(max-width:1730px){
+            margin-right: 0;
+        }
     }
     
     &__subtitle{
@@ -38,11 +67,19 @@
         @extend %title;
         width: rem(461px);
         margin-bottom: rem(30px);
+
+        @media(max-width:1279px){
+            width: 100%;
+        }
     }
     &__text{
         margin: 0;
         width: rem(513px);
         margin-bottom: rem(24px);
+
+        @media(max-width:767px){
+            width: 100%;
+        }
     }
     &__btn{
         padding: rem(15px) rem(45px);

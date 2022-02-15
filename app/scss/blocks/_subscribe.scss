@@ -2,6 +2,17 @@
     padding: rem(80px) 0;
     background-color: $bgSecondary;
     position: relative;
+    @media(max-width: 1750px){
+        &::before,
+        &::after{
+            display: none;
+        }
+    }
+
+    @media(max-width: 767px){
+        padding: rem(40px) 0;
+        background-color: $white;
+    }
 
     &::before{
         z-index: -1;
@@ -11,7 +22,7 @@
         height: rem(118px);
         top: rem(7px);
         left: rem(105px);
-        background-image: url(../../images/subscribe-bg-1.png);
+        background-image: url(../../images/decor/subscribe-bg-1.png);
         background-repeat: no-repeat;
     }
 
@@ -23,7 +34,7 @@
         height: rem(343px);
         bottom: rem(85px);
         right: 0;
-        background-image: url(../../images/subscribe-bg-2.png);
+        background-image: url(../../images/decor/subscribe-bg-2.png);
         background-repeat: no-repeat;
     }
     
@@ -33,9 +44,21 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        filter: drop-shadow(0px 34px 62px rgba(0, 0, 0, .2));
-        border-radius: 20px;
+        box-shadow: 0 rem(34px) rem(62px) rgba(0, 0, 0, .2);
+        border-radius: rem(20px);
         padding: rem(100px) 0 0 rem(110px);
+
+        @media(max-width: 1279px){
+            padding: rem(50px);
+        }
+
+        @media(max-width: 767px){
+            padding: rem(20px);
+            border-radius: 0;
+            width: auto;
+            height: rem(450px);
+            margin:0 rem(-10px);
+        }
     }
 
     &__content{
@@ -58,13 +81,19 @@
         line-height: rem(27px);
         color: $black;
         padding: rem(26px) rem(230px) rem(26px) rem(40px);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 rem(4px) rem(4px) rgba(0, 0, 0, 0.25);
         border-radius: rem(150px);
         border: none;
+
+        @media(max-width: 767px){
+            padding: rem(20px) rem(30px);
+        }
+
         &::placeholder{
             color: $black;
         }
     }
+
     &__btn{
         @extend %montserrat-700;
         font-size: rem(22px);
@@ -75,5 +104,12 @@
         top: rem(8px);
         right: rem(10px);
         z-index: 1;
+
+        @media(max-width: 767px){
+            top: 110%;
+            width: 100%;
+            right: 0;
+        }
     }
+    
 }

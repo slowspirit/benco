@@ -1,4 +1,26 @@
 $(function () {
+
+    $('.header__menu-btn, .header__menu-link, .header__menu-close').on('click', function () {
+        $('.header__menu').toggleClass('header__menu--active');
+    });
+    // $('.header__menu-close').on('click', function () {
+    //     $('.header__menu').removeClass('header__menu--active');
+    // });
+
+    $('.header__menu-link, .logo, .footer__list-link').on('click', function (event) {
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({ scrollTop: top }, 1500);
+    });
+
+
     $('.header__currency').select2({
         minimumResultsForSearch: Infinity,
     });
@@ -6,9 +28,27 @@ $(function () {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        variableWidth: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/angle-left.svg" alt="angle left"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/angle-right.svg" alt="angle right"></button>'
+        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/angle-right.svg" alt="angle right"></button>',
+        responsive: [
+            {
+                breakpoint: 1279,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                }
+            },
+        ]
     });
+
     $('.star').rateYo({
         starWidth: "20px",
         spacing: "9px",
@@ -16,6 +56,7 @@ $(function () {
         ratedFill: "#FFC600",
         starSvg: '<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"/></svg>'
     });
+
     $('.featured__card-star').rateYo({
         starWidth: "22px",
         spacing: "10px",
@@ -24,12 +65,45 @@ $(function () {
         ratedFill: "#34383D",
         starSvg: '<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 15.27L16.18 19L14.54 11.97L20 7.24L12.81 6.63L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27Z"/></svg>'
     });
+
     $('.star-products__slider-items').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/angle-left.svg" alt="angle left"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/angle-right.svg" alt="angle right"></button>'
+        variableWidth: true,
+        prevArrow: '<button type="button" class="slick-prev star-products__arrow-prev"><img src="images/icons/angle-left.svg" alt="angle left"></button>',
+        nextArrow: '<button type="button" class="slick-next star-products__arrow-next"><img src="images/icons/angle-right.svg" alt="angle right"></button>',
+        responsive: [
+            {
+                breakpoint: 1550,
+                settings: {
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: false,
+                }
+            },
+        ]
+    });
+
+    $('.people__list').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        variableWidth: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 450,
+                settings: {
+                    variableWidth: false,
+                    slidesToShow: 1,
+                }
+            },
+        ]
     });
 
     //STAR-PRODUCTS tabs

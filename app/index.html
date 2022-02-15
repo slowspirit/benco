@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
 
     <header class="header">
         <div class="container">
@@ -29,27 +29,39 @@
                 </a>
                 <nav class="header__menu">
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Home</a>
+                        <a class="header__menu-link" href="#body">Home</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Shop</a>
+                        <a class="header__menu-link" href="#selling">Shop</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Blog</a>
+                        <a class="header__menu-link" href="#blog">Blog</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">About Us</a>
+                        <a class="header__menu-link" href="#about">About Us</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Product</a>
+                        <a class="header__menu-link" href="#star-products">Product</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Pages</a>
+                        <a class="header__menu-link" href="#featured">Pages</a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">Contact Us</a>
+                        <a class="header__menu-link" href="#subscribe">Contact Us</a>
                     </li>
+                    <li class="header__menu-account header__menu-item">
+                        <a class="header__menu-link" href="#">My account</a>
+                    </li>
+                    <li class="header__menu-phone header__menu-item header__phone">
+                        <a class="header__menu-link" href="tel:+919986546583">+91998 654 6583</a>
+                    </li>
+                    <button class="header__menu-close">
+                        <span></span>
+                    </button>
                 </nav>
+                <button class="header__menu-btn">
+                    <span></span>
+                </button>
                 <a class="header__link" href="#">
                     <img class="icon" src="images/icons/search.svg" alt="search icon">
                 </a>
@@ -71,7 +83,7 @@
         </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__inner">
                 <img class="about__image" src="images/about.png" alt="about image">
@@ -79,7 +91,7 @@
                     <h2 class="about__subtitle subtitle">ABOUT US</h2>
                     <h1 class="about__title title">
                         FURNITURE
-                        OF ART.
+                        OF ART
                     </h1>
                     <p class="about__text text">
                         Lorem Ipsum is simply dummy text of the printing
@@ -92,7 +104,7 @@
         </div>
     </section>
 
-    <section class="selling">
+    <section class="selling" id="selling">
         <div class="container-medium">
             <div class="selling__inner">
                 <h2 class="selling__title">
@@ -190,7 +202,8 @@
             </div>
         </div>
     </section>
-    <section class="specials">
+
+    <section class="specials" id="specials">
         <div class="container-medium">
             <div class="specials__inner">
                 <h2 class="specials__title">
@@ -230,7 +243,8 @@
             </div>
         </div>
     </section>
-    <section class="star-products">
+
+    <section class="star-products" id="star-products">
         <div class="container-medium">
             <div class="star-products__inner">
                 <h2 class="star-products__title selling__title">
@@ -361,7 +375,7 @@
                         </div>
                     </div>
                     <div class="star-products__tab" id="latest">
-                        <div class="star-products__tab-content">
+                        <div class="star-products__slider-items ">
                             <div class="slider-item star-products__slider-item ">
                                 <div class="slider-item__image-box">
                                     <img class="slider-item__image" src="images/star-product-1.jpg"
@@ -413,10 +427,80 @@
                                 </div>
                                 <p class="slider-item__price">$149.99</p>
                             </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-4.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Comfort Chair</h4>
+                                        <p class="slider-item__rating">3.5</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$599.99</p>
+                            </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-3.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Magazine Holder</h4>
+                                        <p class="slider-item__rating">5.0</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$149.99</p>
+                            </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-4.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Comfort Chair</h4>
+                                        <p class="slider-item__rating">3.5</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$599.99</p>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="star-products__tab" id="sellers">
-                        <div class="star-products__tab-content">
+                        <div class="star-products__slider-items ">
+                            <div class="slider-item star-products__slider-item ">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-1.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Modern Chair</h4>
+                                        <p class="slider-item__rating">4.7</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$99.99</p>
+                            </div>
                             <div class="star-products__slider-item slider-item">
                                 <div class="slider-item__image-box">
                                     <img class="slider-item__image" src="images/star-product-2.jpg"
@@ -451,13 +535,67 @@
                                 </div>
                                 <p class="slider-item__price">$149.99</p>
                             </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-4.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Comfort Chair</h4>
+                                        <p class="slider-item__rating">3.5</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$599.99</p>
+                            </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-3.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Magazine Holder</h4>
+                                        <p class="slider-item__rating">5.0</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$149.99</p>
+                            </div>
+                            <div class="star-products__slider-item slider-item">
+                                <div class="slider-item__image-box">
+                                    <img class="slider-item__image" src="images/star-product-4.jpg"
+                                        alt="star-product image">
+                                </div>
+                                <div class="slider-item__content">
+                                    <div class="slider-item__info">
+                                        <h4 class="slider-item__title">Comfort Chair</h4>
+                                        <p class="slider-item__rating">3.5</p>
+                                    </div>
+                                    <button class="slider-item__buy-btn">
+                                        <img class="slider-item__buy-image" src="images/icons/cart-black.svg"
+                                            alt="cart-black image">
+                                    </button>
+                                </div>
+                                <p class="slider-item__price">$599.99</p>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="services">
+
+    <section class="services" id="services">
         <div class="container">
             <div class="services__inner">
                 <img class="services__image" src="images/services.png" alt="services image">
@@ -487,7 +625,8 @@
             </div>
         </div>
     </section>
-    <section class="blog">
+
+    <section class="blog" id="blog">
         <div class="container">
             <div class="blog__inner">
                 <h2 class="blog__title selling__title">
@@ -541,11 +680,12 @@
             </div>
         </div>
     </section>
-    <section class="people">
+
+    <section class="people" id="people">
         <div class="container">
             <div class="people__inner">
                 <h2 class="people__title selling__title">
-                    WHATS PEOPLE SAY’S
+                    WHAT PEOPLE SAY’S
                 </h2>
                 <div class="people__list">
                     <div class="people__card">
@@ -582,7 +722,8 @@
             </div>
         </div>
     </section>
-    <section class="featured">
+
+    <section class="featured" id="featured">
         <div class="container">
             <div class="featured__inner">
                 <h2 class="featured__title selling__title">
@@ -674,7 +815,8 @@
             </div>
         </div>
     </section>
-    <section class="subscribe">
+
+    <section class="subscribe" id="subscribe">
         <div class="container-medium">
             <div class="subscribe__inner">
                 <div class="subscribe__content">
@@ -692,11 +834,12 @@
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__info">
-                    <a class="logo" href="#">
+                    <a class="logo" href="#body">
                         <img class="logo-image" src="images/logo.svg" alt="logo">
                     </a>
                     <p class="footer__info-text">
@@ -738,40 +881,43 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="footer__list">
-                    <li class="footer__list-title">
-                        Quick Links
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">HOME</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">ABOUT US</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">BLOG</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">PRODUCTS</a>
-                    </li>
-                </ul>
-                <ul class="footer__list">
-                    <li class="footer__list-title">
-                        Support
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">HELP</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">CONTACT</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">POLICY</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="#">SERVICE</a>
-                    </li>
-                </ul>
+                <div class="footer__lists">
+                    <ul class="footer__list">
+                        <li class="footer__list-title">
+                            Quick Links
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#body">HOME</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#about">ABOUT US</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#blog">BLOG</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#star-products">PRODUCTS</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list-title">
+                            Support
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">HELP</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">CONTACT</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">POLICY</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__list-link" href="#">SERVICE</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </footer>

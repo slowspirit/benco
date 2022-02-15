@@ -4,12 +4,17 @@
 
 body {
     margin: 0;
-    min-width: 320px;
+    min-width: rem(320px);
     overflow-x: hidden;
     @extend %roboto-500;
     color: $textMain;
-    font-size: 22px;
-    line-height: 26px;
+    font-size: rem(22px);
+    line-height: rem(26px);
+
+    @media(max-width:767px){
+        font-size: rem(18px);
+        line-height: rem(22px);
+    }
 }
 
 a{
@@ -17,6 +22,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
 p{
     margin: 0;
 }
@@ -26,6 +32,7 @@ p{
     margin: 0 auto;
     padding: 0 rem(10px);
 }
+
 .container-medium{
     max-width: rem(1520px);
     margin: 0 auto;
@@ -36,19 +43,3 @@ p{
     @extend %btn;
     display: inline-block;
 }
-
-// @media (max-width:1200px){
-//     .container{
-//         max-width: 970px;
-//     }
-// }
-// @media (max-width:992px){
-//     .container{
-//         max-width: 750px;
-//     }
-// }
-// @media (max-width:767px){
-//     .container{
-//         max-width: none;
-//     }
-// }

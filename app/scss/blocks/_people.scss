@@ -4,6 +4,16 @@
     background-color: $bgSecondary;
     position: relative;
 
+    @media(max-width: 1279px){
+        &::before{
+            display: none;
+        }
+    }
+
+    @media(max-width: 767px){
+        padding: rem(40px) 0;
+    }
+
     &::before{
         z-index: -1;
         position: absolute;
@@ -12,7 +22,7 @@
         height: rem(110px);
         top: 0;
         left: rem(20px);
-        background-image: url(../../images/people-bg-1.png);
+        background-image: url(../../images/decor/people-bg-1.png);
         background-repeat: no-repeat;
     }
 
@@ -24,7 +34,7 @@
         height: rem(289px);
         top: rem(231px);
         right: 0;
-        background-image: url(../../images/people-bg.png);
+        background-image: url(../../images/decor/people-bg.png);
         background-repeat: no-repeat;
     }
     &__title{
@@ -34,6 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0 rem(-10px) 0 0;
     }
 
     &__card{
@@ -41,11 +52,16 @@
         flex-direction: column;
         position: relative;
         padding: rem(100px) rem(21px) rem(50px) ;
-        width: rem(540px);
+        max-width: rem(540px);
         height: rem(345px);
+        // margin: 0 rem(15px);
         background-color: $alabaster;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 30px;
+        box-shadow: 0 rem(2px) rem(4px) rgba(0, 0, 0, 0.1);
+        border-radius: rem(30px);
+        @media(max-width: 450px){
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     &__card-image{
@@ -58,14 +74,14 @@
         border-radius: 50%;
         background: transparent;
         border: 2px solid $white;
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1));
+        box-shadow: 0 rem(4px) rem(4px) rgba(0, 0, 0, 0.1);
     }
 
     &__card-text{
         margin: 0;
         @extend %roboto-400;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: rem(18px);
+        line-height: rem(21px);
         text-align: center;
         letter-spacing: 0.09em;
         margin-bottom: rem(50px);
@@ -74,8 +90,8 @@
     &__card-name{
         @extend %roboto-700;
         color: $black;
-        font-size: 22px;
-        line-height: 26px;
+        font-size: rem(22px);
+        line-height: rem(26px);
         text-align: center;
         letter-spacing: 0.09em;
         margin: 0;
@@ -86,9 +102,16 @@
     &__card-position{
         @extend %roboto-400;
         color: $black;
-        font-size: 20px;
-        line-height: 23px;
+        font-size: rem(20px);
+        line-height: rem(23px);
         text-align: center;
         letter-spacing: 0.09em;
+    }
+    .slick-list{
+        padding-top: rem(55px);
+    }
+    .slick-slide{
+        margin: 0 rem(15px);
+        
     }
 }
