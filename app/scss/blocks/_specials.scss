@@ -22,7 +22,7 @@
         left: 0;
         height: rem(109px);
         width: rem(109px);
-        background-image: url(../../images/decor/specials-bg-1.png);
+        background-image: url("@img/decor/specials-bg-1.png");
         background-repeat: no-repeat;
     }
     
@@ -34,7 +34,7 @@
         right: rem(44px);
         height: rem(295px);
         width: rem(10px);
-        background-image: url(../../images/decor/specials-bg-2.png);
+        background-image: url(@img/decor/specials-bg-2.png);
         background-repeat: no-repeat;
     }
 
@@ -42,7 +42,7 @@
         display: block;
         padding-top: rem(60px);
         height: rem(767px);
-        background-image: url(../../images/specials-bg.jpg);
+        background-image: url("@img/specials-bg.jpg");
         background-repeat: no-repeat;
         background-size: content;
         background-position: center;
@@ -55,7 +55,7 @@
             border-radius: 0;
             border: none;
             padding: rem(60px) rem(10px);
-            background: linear-gradient(198.73deg, rgba(0, 0, 0, 0.0001) 15.31%, rgba(0, 0, 0, 0.837986) 67.37%), url(../../images/specials-bg.jpg);
+            background: linear-gradient(198.73deg, rgba(0, 0, 0, 0.0001) 15.31%, rgba(0, 0, 0, 0.837986) 67.37%), url("@img/specials-bg.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -130,6 +130,7 @@
                 border-top: 3px solid #fff;
                 border-right: 3px solid #fff;
             }
+            
             &.specials__counter-hours::before,
             &.specials__counter-seconds::before{
                 position: absolute;

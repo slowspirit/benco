@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const del = require('del');
+const replace = require('gulp-replace');
 
 
 function browsersync() {
@@ -18,11 +19,19 @@ function browsersync() {
     })
 }
 
+function html() {
+    return src('app/*.html')
+        .pipe(replace(/@img\//g, 'images/'))
+        .pipe(dest('app/'))
+        .pipe(browserSync.stream())
+}
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/style.scss', { sourcemaps: true })
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('style.min.css'))
+        .pipe(replace(/@img\//g, '../images/'))
+        .pipe(replace(/@fonts\//g, '../fonts/'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 versions'],
             grid: true
@@ -30,6 +39,7 @@ function styles() {
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
+
 
 function scripts() {
     return src([
@@ -73,6 +83,7 @@ function build() {
     return src([
         'app/**/*.html',
         'app/css/style.min.css',
+        'app/fonts/*.*',
         'app/js/main.min.js',
     ], { base: 'app' })
         .pipe(dest('dist'))
@@ -85,6 +96,7 @@ function watching() {
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
+exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -93,4 +105,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(html, styles, scripts, browsersync, watching);

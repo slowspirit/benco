@@ -67,7 +67,7 @@ $(function () {
     });
 
     $('.star-products__slider-items').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 4,
         slidesToScroll: 1,
         variableWidth: true,
@@ -83,6 +83,7 @@ $(function () {
             {
                 breakpoint: 767,
                 settings: {
+                    infinite: true,
                     arrows: false,
                 }
             },

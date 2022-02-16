@@ -22,7 +22,7 @@
         left: 0;
         width: rem(320px);
         height: rem(168px);
-        background-image: url(../../images/decor/blog-bg-1.png);
+        background-image: url("@img/decor/blog-bg-1.png");
         background-repeat: no-repeat;
     }
 
@@ -34,7 +34,7 @@
         right: rem(140px);
         width: rem(313px);
         height: rem(215px);
-        background-image: url(../../images/decor/blog-bg-2.png);
+        background-image: url("@img/decor/blog-bg-2.png");
         background-repeat: no-repeat;
     }
 
@@ -109,16 +109,16 @@
         }
 
         &:nth-child(1){
-            background-image: url(../../images/blog-1.jpg);
+            background-image: url("@img/blog-1.jpg");
         }
         &:nth-child(2){
-            background-image: url(../../images/blog-2.jpg);
+            background-image: url("@img/blog-2.jpg");
         }
         &:nth-child(3){
-            background-image: url(../../images/blog-3.jpg);
+            background-image: url("@img/blog-3.jpg");
         }
         &:nth-child(4){
-            background-image: url(../../images/blog-4.jpg);
+            background-image: url("@img/blog-4.jpg");
         }
     }
 
@@ -147,8 +147,6 @@
             padding-left: rem(23px);
             position: relative;
         }
-        
-        
     }
 
     &__card-date::before,
@@ -159,16 +157,16 @@
         left: 0;
         width: rem(18px);
         height: rem(18px);
-        background-image: url(../../images/icons/calendar.svg);
+        background-image: url("@img/icons/calendar.svg");
         background-repeat: no-repeat;
     }
 
     &__card-date::before{
-        background-image: url(../../images/icons/calendar.svg);
+        background-image: url("@img/icons/calendar.svg");
     }
 
     &__card-comments::before{
-        background-image: url(../../images/icons/bubble.svg);
+        background-image: url("@img/icons/bubble.svg");
     }
 
     &__card-title{

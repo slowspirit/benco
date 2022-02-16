@@ -20,12 +20,13 @@
         left: 0;
         width: rem(85px);
         height: rem(170px);
-        background-image: url(../../images/decor/services-bg.png);
+        background-image: url("@img/decor/services-bg.png");
         background-repeat: no-repeat;
     }
 
     &__image{
         max-width: 100%;
+        
         @media(max-width: 767px){
             max-width: 70%;
         }
@@ -59,6 +60,7 @@
     &__list-item{
         display: flex;
         align-items: center;
+
         & + .services__list-item{
             margin-left: rem(189px);
 

@@ -15,7 +15,7 @@
         height: rem(123px);
         top: rem(100px);
         right: 0;
-        background-image: url(../../images/decor/star-product-bg.png);
+        background-image: url("@img/decor/star-product-bg.png");
         background-repeat: no-repeat;
     }
 
@@ -183,7 +183,7 @@
                 height: rem(23px);
                 top: 0;
                 left: 0;
-                background-image: url(../../images/icons/star_border.svg);
+                background-image: url("@img/icons/star_border.svg");
                 background-repeat: no-repeat;
             }
         }
@@ -212,17 +212,21 @@
     }
 
     .slick-slide{
-        width: rem(360px);
+        width: rem(356px);
         margin: 0 rem(11px);
 
         @media(max-width: 400px){
             width: auto;
         }
     }
+    .slick-track{
+        margin: 0;
+    }
 
     .slick-list{
         padding-top: rem(10px);
         height: rem(530px);
+        // margin-left: rem(-7px);
     }
 
     &__arrow-prev{
@@ -235,5 +239,8 @@
         @media(max-width: 1600px){
             right: rem(20px);
         }
+    }
+    .slick-disabled{
+        background-color: $greyBg;
     }
 }
