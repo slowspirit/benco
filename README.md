@@ -5,4 +5,4 @@ https://slowspirit.github.io/benco/
 
 <img src="./benco.png">
 
-## Adaptive landing page of a furniture & interior accessories shop.
+## Adaptive landing page of the furniture & interior accessories shop.
