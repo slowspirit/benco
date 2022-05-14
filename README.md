@@ -4,4 +4,6 @@
 
 https://slowspirit.github.io/benco/
 
-<img src="./Benco_mockup_500.jpg">
+<!-- <img src="./Benco_mockup_500.jpg">
+<img src="./Benco_mockup_600.jpg"> -->
+<img src="./Benco_mockup_700.jpg">
